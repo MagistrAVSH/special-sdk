@@ -1,5 +1,5 @@
 {
-	"name": "@orbit-software/special-sdk",
+	"name": "special-sdk",
 	"version": "0.1.0",
 	"description": "Minimal SDK exposing only requestRewardAd().",
 	"scripts": {

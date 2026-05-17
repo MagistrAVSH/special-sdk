@@ -27,7 +27,7 @@ In your game's `package.json`:
 ```json
 {
   "dependencies": {
-    "@orbit-software/special-sdk": "file:../SpecialSDK"
+    "special-sdk": "file:../SpecialSDK"
   }
 }
 ```
@@ -58,7 +58,7 @@ The SDK has exactly **one** ad provider: **Monetag**. You initialize it once at 
 ### ESM / bundled
 
 ```ts
-import SpecialSDK from '@orbit-software/special-sdk';
+import SpecialSDK from 'special-sdk';
 
 await SpecialSDK.initialize({
   ads: {
@@ -115,7 +115,7 @@ if (watched) {
 
 ```ts
 const watched = await SpecialSDK.requestRewardAd({
-  placementId: 'level_end',   // tagged in Monetag's requestVar as `orbit-level_end`
+  placementId: 'level_end',   // tagged in Monetag's requestVar as `special-level_end`
   onStart: () => {            // called before the ad starts playing
     pauseGame();
   },
@@ -142,7 +142,7 @@ SpecialSDK.onAdEnd = (success: boolean) => {
 ## Full example
 
 ```ts
-import SpecialSDK from '@orbit-software/special-sdk';
+import SpecialSDK from 'special-sdk';
 
 async function bootstrap() {
   await SpecialSDK.initialize({
