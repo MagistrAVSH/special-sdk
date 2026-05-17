@@ -115,7 +115,7 @@ if (watched) {
 
 ```ts
 const watched = await SpecialSDK.requestRewardAd({
-  placementId: 'level_end',   // tagged in Monetag's requestVar as `special-level_end`
+  placementId: 'level_end',   // tagged in Monetag's requestVar as `orbit-level_end`
   onStart: () => {            // called before the ad starts playing
     pauseGame();
   },

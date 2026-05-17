@@ -1,4 +1,3 @@
-import { version } from '../package.json';
 import { createAdLogger } from './lib/ads/ad-logger';
 import { initMonetagAds, showMonetagAd } from './lib/ads/monetag';
 import type {
@@ -57,6 +56,8 @@ const SpecialSDK: SpecialSDKType = {
       adLog.info('Dispatching reward ad request', {
         placementId: options.placementId,
       });
+
+      options.onStart?.();
 
       const ymid = '0';
       const result = await showMonetagAd<boolean>(
