@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.vscode/
+.idea/
+.DS_Store
+.env*
+*.local
+Thumbs.db
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

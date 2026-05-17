@@ -1,0 +1,27 @@
+{
+	"name": "@orbit-software/special-sdk",
+	"version": "0.1.0",
+	"description": "Minimal SDK exposing only requestRewardAd().",
+	"scripts": {
+		"dev": "vite dev --config vite.config.esm.mts",
+		"build:esm": "vite build --config vite.config.esm.mts",
+		"build:umd": "vite build --config vite.config.umd.mts",
+		"build": "npm run build:esm && npm run build:umd",
+		"typecheck": "tsc --noEmit"
+	},
+	"main": "dist/umd/sdk.umd.js",
+	"types": "dist/esm/sdk.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/umd/sdk.umd.js",
+			"types": "./dist/esm/sdk.d.ts",
+			"import": "./dist/esm/sdk.mjs"
+		}
+	},
+	"devDependencies": {
+		"@types/node": "^22.19.19",
+		"typescript": "^5.9.3",
+		"vite": "^6.0.6",
+		"vite-plugin-dts": "^4.4.0"
+	}
+}
